@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function Button({ children, onClick, icon, disabled, className, loading, ...props }) {
     return (
         <button
-            className={`flex items-center justify-center gap-2 bg-blue-theme text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all hover:bg-blue-theme/90 ${
+            className={`flex items-center justify-center gap-2 bg-blue-500 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all hover:bg-blue-400 ${
                 disabled || loading ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.01] active:scale-[0.98]'
             } ${className}`}
             onClick={onClick}

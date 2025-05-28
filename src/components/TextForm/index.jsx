@@ -125,7 +125,7 @@ function Form({ formType, heading, subHeading, handleResponse }) {
                                 <input
                                     type="checkbox"
                                     id="remember"
-                                    className="h-4 w-4 text-blue-theme focus:ring-blue-theme border-gray-300 rounded"
+                                    className="h-4 w-4 text-blue-500 focus:ring-blue-500 border-gray-300 rounded"
                                 />
                                 <label htmlFor="remember" className="ml-2 text-gray-700">
                                     Remember me
@@ -133,7 +133,7 @@ function Form({ formType, heading, subHeading, handleResponse }) {
                             </div>
                             <button
                                 type="button"
-                                className="text-blue-theme hover:underline font-medium"
+                                className="text-blue-500 hover:underline font-medium"
                             >
                                 Forgot password?
                             </button>
@@ -141,7 +141,7 @@ function Form({ formType, heading, subHeading, handleResponse }) {
                     )}
                     <div className="mt-6 space-y-4">
                         {error && (
-                            <p className="text-red-theme text-sm font-medium">
+                            <p className="text-red-500 text-sm font-medium">
                                 {error.message}
                             </p>
                         )}
@@ -160,7 +160,7 @@ function Form({ formType, heading, subHeading, handleResponse }) {
                                 <p className="text-gray-600">Don't have an account?</p>
                                 <Link
                                     to="/register"
-                                    className="text-blue-theme hover:underline font-medium"
+                                    className="text-blue-500 hover:underline font-medium"
                                 >
                                     Sign up
                                 </Link>
@@ -170,7 +170,7 @@ function Form({ formType, heading, subHeading, handleResponse }) {
                                 <p className="text-gray-600">Already have an account?</p>
                                 <Link
                                     to="/login"
-                                    className="text-blue-theme hover:underline font-medium"
+                                    className="text-blue-500 hover:underline font-medium"
                                 >
                                     Sign in
                                 </Link>
