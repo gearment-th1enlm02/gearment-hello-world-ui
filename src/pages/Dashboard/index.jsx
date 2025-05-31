@@ -25,7 +25,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`${APP_API_URL}/userdata/${user.id}`, {
+        const response = await axios.get(`${APP_API_URL}/api/userdata/${user.id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setUserData({
@@ -81,7 +81,7 @@ function Dashboard() {
     formData.append('avatar', file);
 
     try {
-      const response = await axios.post(`${APP_API_URL}/userdata/upload-avatar`, formData, {
+      const response = await axios.post(`${APP_API_URL}/api/userdata/upload-avatar`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data',
@@ -120,7 +120,7 @@ function Dashboard() {
     }
 
     try {
-      const response = await axios.put(`${APP_API_URL}/userdata/${user.id}`, userData, {
+      const response = await axios.put(`${APP_API_URL}/api/userdata/${user.id}`, userData, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setUserData(response.data);
@@ -144,7 +144,7 @@ function Dashboard() {
     if (!window.confirm('Are you sure you want to delete your account?')) return;
 
     axios
-      .delete(`${APP_API_URL}/userdata/${user.id}`, {
+      .delete(`${APP_API_URL}/api/userdata/${user.id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       })
       .then(() => {
